@@ -1,0 +1,30 @@
+
+name: Build W Menu
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  build:
+    name: Build for Android
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download source
+        uses: actions/checkout@v4
+
+      - name: Build Geode mod
+        uses: geode-sdk/build-geode-mod@main
+        id: build
+        with:
+          target: Android64
+          # Uses the SDK default unless your project pins a version.
+
+      - name: Upload .geode package
+        uses: actions/upload-artifact@v4
+        with:
+          name: WMenu-Android64
+          path: ${{ steps.build.outputs.build-output }}
