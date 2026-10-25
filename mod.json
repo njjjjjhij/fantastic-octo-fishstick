@@ -1,0 +1,14 @@
+{
+  "geode": "5.9.0",
+  "gd": {
+    "win": "*",
+    "android": "*",
+    "ios": "*",
+    "mac": "*"
+  },
+  "id": "yourname.w-menu",
+  "name": "W Menu",
+  "version": "1.0.1",
+  "developer": "yourname",
+  "description": "A W button in the main and pause menus opens a mobile-style click GUI. Main feature: CBFH, an automatic click-between-frames assist with a 1-20 frame window."
+}
